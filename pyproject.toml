@@ -1,0 +1,45 @@
+[project]
+name = "valorant-mcp-server"
+version = "0.1.0"
+description = "Valorant MCP Server using FastMCP and the HenrikDev API"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [
+  { name = "Your Name", email = "you@example.com" }
+]
+dependencies = [
+  "fastmcp>=0.2.0",
+  "requests>=2.25.0",
+  "pydantic>=2.0.0",
+  "python-dotenv>=1.0.0",
+]
+keywords = ["mcp", "model-context-protocol", "valorant", "henrikdev", "fastmcp"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+]
+
+[project.scripts]
+valorant-mcp-server = "valorant_mcp_server:main"
+
+[project.urls]
+Homepage = "https://github.com/<your-username>/valorant-mcp-server"
+Repository = "https://github.com/<your-username>/valorant-mcp-server"
+Issues = "https://github.com/<your-username>/valorant-mcp-server/issues"
+
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv]
+# Pinning Python version for reproducible environments
+python = "3.11"
+
+[tool.hatch.build.targets.wheel]
+packages = ["valorant_mcp_server"]
+
+
